@@ -1,12 +1,12 @@
 # Build files
 dist/*
-dist/etl-service/package.json
-dist/ocm-service/package.json
-dist/tests/package.json
-!dist/**/package.json
-!dist/**/yarn.lock
-!dist/**/.yarnrc.yml
-!dist/**/Dockerfile
+!dist/etl-service/package.json
+!dist/ocm-service/package.json
+!dist/tests/package.json
+!dist/*/package.json
+!dist/*/yarn.lock
+!dist/*/.yarnrc.yml
+!dist/*/Dockerfile
 
 # Secrets
 infra/.env
