@@ -1,0 +1,20 @@
+# Build files
+dist/*
+!dist/**/package.json
+!dist/**/yarn.lock
+!dist/**/.yarnrc.yml
+
+# Secrets
+infra/.env
+
+# Yarn with zero installs
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+!.yarn/cache
+
+# Intellij
+.idea
