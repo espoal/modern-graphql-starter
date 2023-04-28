@@ -1,6 +1,4 @@
-# Build files
 
-dist/*/node_modules
 
 # Secrets
 infra/.env

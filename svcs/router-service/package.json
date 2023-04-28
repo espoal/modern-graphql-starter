@@ -1,4 +1,7 @@
 {
   "name": "@svcs/router-service",
+  "scripts": {
+    "generate": "rover supergraph compose --config src/supergraph.dev.yaml > ./src/supergraph.graphql"
+  },
   "packageManager": "yarn@4.0.0-rc.42"
 }
