@@ -6,4 +6,3 @@ tests/*
 !*/.yarnrc.yml
 !*/yarn.lock
 !*/package.json
-!*/Dockerfile

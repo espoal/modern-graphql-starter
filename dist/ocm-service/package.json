@@ -6,5 +6,8 @@
     "graphql": "16.6.0",
     "graphql-tag": "2.12.6"
   },
+  "devDependencies": {
+    "nodemon": "2.0.22"
+  },
   "packageManager": "yarn@4.0.0-rc.42"
 }

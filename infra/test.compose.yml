@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+
+  build-tests:
+    build:
+      dockerfile: dev.docker
+    restart: always
+    volumes:
+      - ../:/home/node/app
+    command: "yarn node build.tests.mjs watch"
+
+  tests:
+    build:
+      dockerfile: ../../tests/Dockerfile
+      context: ../dist/tests
+    init: true
+    depends_on:
+      - build-tests
+    restart: always
+    volumes:
+      - ../dist/tests/src:/home/node/app/src
+    command: "yarn node --test --watch src"
