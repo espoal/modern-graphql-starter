@@ -30,13 +30,10 @@
     "typescript": "5.0.4"
   },
   "workspaces": [
-    "dev/*",
     "dist/*",
-    "docs",
-    "infra",
     "libs/*",
     "svcs/*",
-    "test"
+    "tests"
   ],
   "packageManager": "yarn@4.0.0-rc.42"
 }

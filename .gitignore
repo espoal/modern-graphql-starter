@@ -2,7 +2,6 @@
 infra/.env
 
 # Dist
-
 dist/etl-service/*
 dist/ocm-service/*
 dist/tests/*

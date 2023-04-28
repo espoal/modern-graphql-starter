@@ -8,7 +8,7 @@ RUN chown -R node:node /home/node
 USER node
 
 COPY .yarnrc.yml .
-COPY --chown=node:node yarn.lock .
+COPY yarn.lock .
 COPY package.json .
-RUN yarn install
+RUN yarn install --immutable
 
