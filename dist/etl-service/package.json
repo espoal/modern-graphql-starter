@@ -1,5 +1,6 @@
 {
   "name": "@dist/etl-service",
+  "version": "0.0.1",
   "dependencies": {
     "mongodb": "5.3.0"
   },

@@ -1,8 +1,0 @@
-etl-service/*
-ocm-service/*
-router-service/*
-tests/*
-
-!*/.yarnrc.yml
-!*/yarn.lock
-!*/package.json

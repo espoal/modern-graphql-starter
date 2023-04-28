@@ -1,7 +1,15 @@
-
-
 # Secrets
 infra/.env
+
+# Dist
+
+dist/etl-service/*
+dist/ocm-service/*
+dist/tests/*
+
+!dist/*/.yarnrc.yml
+!dist/*/yarn.lock
+!dist/*/package.json
 
 # Yarn with zero installs
 .yarn/*
