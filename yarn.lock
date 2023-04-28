@@ -13,6 +13,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@dist/ocm-service@workspace:dist/ocm-service":
+  version: 0.0.0-use.local
+  resolution: "@dist/ocm-service@workspace:dist/ocm-service"
+  languageName: unknown
+  linkType: soft
+
 "@rometools/cli-darwin-arm64@npm:12.0.0":
   version: 12.0.0
   resolution: "@rometools/cli-darwin-arm64@npm:12.0.0"

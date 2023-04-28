@@ -18,6 +18,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:dist/etl-service"\
     },\
     {\
+      "name": "@dist/ocm-service",\
+      "reference": "workspace:dist/ocm-service"\
+    },\
+    {\
       "name": "docs",\
       "reference": "workspace:docs"\
     },\
@@ -46,6 +50,7 @@ const RAW_RUNTIME_STATE =
   "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)|(^(?:dist(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)|(^(?:dev(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
   "fallbackExclusionList": [\
     ["@dist/etl-service", ["workspace:dist/etl-service"]],\
+    ["@dist/ocm-service", ["workspace:dist/ocm-service"]],\
     ["@svcs/etl-service", ["workspace:svcs/etl-service"]],\
     ["@svcs/ocm-service", ["workspace:svcs/ocm-service"]],\
     ["@svcs/router-service", ["workspace:svcs/router-service"]],\
@@ -74,6 +79,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@dist/etl-service", "workspace:dist/etl-service"],\
           ["mongodb", "virtual:05d90e1825c109c860fe563af31f18cae19908f23c1eba6934cb1ad81efeb4b370a501ad07fed7969d56e41bd16aca5947277e24fc67ff019a8b01e3d26cd6b4#npm:5.3.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
+    ["@dist/ocm-service", [\
+      ["workspace:dist/ocm-service", {\
+        "packageLocation": "./dist/ocm-service/",\
+        "packageDependencies": [\
+          ["@dist/ocm-service", "workspace:dist/ocm-service"]\
         ],\
         "linkType": "SOFT"\
       }]\
