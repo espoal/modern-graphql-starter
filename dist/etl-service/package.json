@@ -1,7 +1,0 @@
-{
-  "name": "@dist/etl-service",
-  "packageManager": "yarn@4.0.0-rc.42",
-  "dependencies": {
-    "mongodb": "5.3.0"
-  }
-}
