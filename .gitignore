@@ -3,6 +3,7 @@ dist/*
 !dist/**/package.json
 !dist/**/yarn.lock
 !dist/**/.yarnrc.yml
+!dist/**/Dockerfile
 
 # Secrets
 infra/.env
