@@ -1,7 +1,8 @@
 # Build files
 dist/*
-!dist/etl-service/
-!dist/ocm-service/
+dist/etl-service/*
+dist/ocm-service/*
+dist/tests/*
 !dist/*/package.json
 !dist/*/yarn.lock
 !dist/*/.yarnrc.yml
