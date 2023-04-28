@@ -60,6 +60,14 @@ Then visit:
 - http://localhost:4001/graphql: `ocm-service` graphql instance
 - https://localhost:8443/: `etl-service` worker
 
+Make sure your schema is updated with:
+
+```bash
+yarn graphql:generate
+```
+
+Apollo router will automatically pick the changes thanks to hot module reloading.
+
 # Testing
 
 - unit
@@ -72,3 +80,4 @@ Then visit:
 - [ ] when dist folders doesn't exist `build` service fails due to permissions
 - [ ] Cleanup docker
 - [ ] Cleanup router
+- [ ] Split docker compose file
