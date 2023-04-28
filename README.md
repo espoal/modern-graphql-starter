@@ -2,21 +2,33 @@
 
 # Introduction
 
-This is a starter project for a modern graphql server. It is optimized for **1 minute CI/CD**, tests included,
-find out how here.
+This is a starter project for a modern graphql federation. It is optimized for **1 minute CI/CD**, tests included,
+find out how [here](docs/iteration.md). The design principles are:
+
+- **Fast iteration**:
+- **Low dependencies**:
+- **High credence in tests**:
+
+Read more about the project [here](docs/README.md).
 
 **Tools used**:
-- [Apollo router]
+
+- [Apollo router](https://www.apollographql.com/docs/router/): Blazing fast graphql router written in rust
+- [Apollo rover](https://www.apollographql.com/docs/rover/): Schema manager and validator written in rust
+- [Esbuild](https://esbuild.github.io/): Blazing fast typescript compiler written in golang
+- [Rome toolchain](https://rome.tools/): Blazing fast linter and formatter written in golang
+- [Ecmascript modules](https://nodejs.org/api/esm.html): Ecmascript modules for easy testing
+
 
 # Table of Contents
-1. [Prerquisites](#example)
-2. [Installation](#example2)
-3. [Running the app](#third-example)
-4. [Testing](#fourth-examplehttpwwwfourthexamplecom)
+1. [Prerquisites](#Prerequisites)
+2. [Installation](#Installation)
+3. [Running the app](#Running-the-app)
+4. [Testing](#Testing)
 
 # Prerequisites
 
-This project has been tested on linux. It should work on other platforms, but it has not been tested.
+This project has been tried on linux. It should work on other platforms, but it has not been tested.
 
 - Setup yarn v4, as explained [here](https://yarnpkg.com/getting-started/install):
 ```bash
@@ -29,6 +41,8 @@ Also copy the `.env.example` file to `.env` and fill in the values.
 ```bash
 cp infra/.env.example infra/.env
 ```
+
+You need a modern docker version to run this, check more [here](https://docs.docker.com/get-docker/).
 
 # Installation
 
