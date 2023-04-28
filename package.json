@@ -2,11 +2,22 @@
   "name": "modern-graphql-starter",
   "scripts": {
     "dev:setup": "",
+    "dev:watch": "docker compose -f infra/dev.compose.yml up --build",
+    "dev:clean": "docker compose -f infra/dev.compose.yml down --volumes --remove-orphans",
+    "dev:build": "node build.mjs",
+    "graphql:generate": "yarn svcs/router-service/ generate",
     "lint:setup": "rome start",
-    "lint:format": "rome format svcs test libs --write --use-server",
-    "lint:test": "rome ci"
+    "lint:format": "rome format svcs tests libs --write --use-server",
+    "test:lint": "rome ci svcs tests",
+    "test:tsc": "tsc --noEmit",
+    "test:build": "node build.tests.mjs",
+    "test:unit": "node --test dist/ocm-service dist/etl-service",
+    "test:e2e": "node --test dist/tests",
+    "test:watch": "node --test --watch dist",
+    "test:prod": ""
   },
   "devDependencies": {
+    "@libs/build": "workspace:^",
     "@types/node": "18.16.2",
     "rome": "12.0.0",
     "typescript": "5.0.4"

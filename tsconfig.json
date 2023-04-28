@@ -9,8 +9,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
+    "noImplicitAny": false
   },
+  "files": ["libs/types/graphql.d.ts"],
   "include": ["svcs/**/*", "tests/**/*"],
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Recommended"

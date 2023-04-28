@@ -1,0 +1,13 @@
+sandbox:
+  enabled: true
+
+supergraph:
+  listen: 0.0.0.0:4000
+  introspection: true
+
+health_check:
+  listen: 0.0.0.0:8088
+  enabled: true
+
+override_subgraph_url:
+  ocm: http://ocm-service:4000

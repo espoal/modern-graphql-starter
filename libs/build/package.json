@@ -1,4 +1,12 @@
 {
-  "name": "build",
+  "name": "@libs/build",
+  "main": "index.mjs",
+  "dependencies": {
+    "@luckycatfactory/esbuild-graphql-loader": "^3.8.1",
+    "esbuild": "^0.17.18",
+    "glob": "^10.2.2",
+    "graphql": "^16.6.0",
+    "graphql-tag": "^2.12.6"
+  },
   "packageManager": "yarn@4.0.0-rc.42"
 }
