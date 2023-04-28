@@ -58,8 +58,9 @@ yarn dev:watch
 
 Then visit:
 
-- http://localhost:4000/graphql
-- https://localhost:8443/
+- http://localhost:4000/graphql: Federation router
+- http://localhost:4001/graphql: `ocm-service` graphql instance
+- https://localhost:8443/: `etl-service` worker
 
 # Testing
 
