@@ -50,6 +50,14 @@ yarn install
 
 # Running the app
 
+Start the lint with:
+
+```bash
+yarn lint:setup
+```
+
+Start the app with:
+
 ```bash
 yarn dev:watch
 ```
@@ -77,6 +85,10 @@ Make sure your infra is running with
 Then run the tests with:
 
 `yarn dev:test`
+
+You can also run tests with:
+
+`yarn test:all`
 
 
 # TODOS

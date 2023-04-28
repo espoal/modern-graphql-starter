@@ -1,22 +1,27 @@
 {
   "name": "modern-graphql-starter",
   "scripts": {
-    "dev:setup": "",
+    "build:dev": "node build.mjs",
+    "build:prod": "NODE_ENV=production node build.mjs",
+    "build:tests": "node build.tests.mjs",
+    "build:schema": "yarn svcs/router-service/ generate",
+    "build:clean": "rm -rf dist/etl-service/src dist/ocm-service/src dist/tests/src",
     "dev:infra": "docker compose -f infra/infra.compose.yml up --build",
     "dev:watch": "docker compose -f infra/infra.compose.yml -f infra/build.compose.yml up --build",
     "dev:test": "docker compose -f infra/test.compose.yml up --build",
     "dev:clean": "docker compose -f infra/infra.compose.yml -f infra/build.compose.yml -f infra/test.compose.yml down --volumes --remove-orphans",
-    "dev:build": "node build.mjs",
-    "graphql:generate": "yarn svcs/router-service/ generate",
     "lint:setup": "rome start",
     "lint:format": "rome format svcs tests libs --write --use-server",
+    "lint:check": "rome check svcs tests libs --use-server",
+    "lint:apply": "rome check svcs tests libs --apply-unsafe --use-server",
+    "lint:fix": "yarn lint:format && yarn lint:apply",
     "test:lint": "rome ci svcs tests",
     "test:tsc": "tsc --noEmit",
-    "test:build": "node build.tests.mjs",
     "test:unit": "node --test dist/ocm-service dist/etl-service",
     "test:e2e": "node --test dist/tests",
     "test:watch": "node --test --watch dist",
-    "test:prod": ""
+    "test:prod": "echo \" Not implemented yet! \"",
+    "test:all": "yarn test:lint && yarn test:tsc && yarn test:unit && yarn test:e2e"
   },
   "devDependencies": {
     "@libs/build": "workspace:^",

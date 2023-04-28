@@ -1,5 +1,5 @@
-import { createSecureServer, createServer } from 'node:http2'
 import { readFile } from 'node:fs/promises'
+import { createSecureServer, createServer } from 'node:http2'
 import { env } from 'node:process'
 
 const isProd = env.NODE_ENV === 'production'

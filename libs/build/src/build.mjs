@@ -1,7 +1,7 @@
 import { baseOptions } from './options.mjs'
-import process, { argv } from 'node:process'
 import esbuild from 'esbuild'
 import { glob } from 'glob'
+import process, { argv } from 'node:process'
 
 const isProd = process.env.NODE_ENV === 'production' || argv.includes('prod')
 const shouldWatch = argv.includes('watch')
@@ -24,7 +24,7 @@ export const buildHelper = async ({
 	console.log(`Starting ${buildType} in ${envType} for: ${name}`)
 
 	if (patterns.length > 0) {
-		let resolvedPatterns = []
+		const resolvedPatterns = []
 		for (const pattern of patterns) {
 			resolvedPatterns.push(...(await glob(pattern)))
 		}
