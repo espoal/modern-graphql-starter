@@ -70,14 +70,15 @@ Apollo router will automatically pick the changes thanks to hot module reloading
 
 # Testing
 
-- unit
-- e2e
-- coverage
+Make sure your infra is running with
+
+`yarn dev:infra`
+
+Then run the tests with:
+
+`yarn dev:test`
 
 
 # TODOS
 
-- [ ] when dist folders doesn't exist `build` service fails due to permissions
-- [ ] Cleanup docker
-- [ ] Cleanup router
-- [ ] Split docker compose file
+- [ ] Use yarn cache in containers

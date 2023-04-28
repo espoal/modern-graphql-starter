@@ -2,8 +2,10 @@
   "name": "modern-graphql-starter",
   "scripts": {
     "dev:setup": "",
-    "dev:watch": "docker compose -f infra/dev.compose.yml up --build",
-    "dev:clean": "docker compose -f infra/dev.compose.yml down --volumes --remove-orphans",
+    "dev:infra": "docker compose -f infra/infra.compose.yml up --build",
+    "dev:watch": "docker compose -f infra/infra.compose.yml -f infra/build.compose.yml up --build",
+    "dev:test": "docker compose -f infra/test.compose.yml up --build",
+    "dev:clean": "docker compose -f infra/infra.compose.yml -f infra/build.compose.yml -f infra/test.compose.yml down --volumes --remove-orphans",
     "dev:build": "node build.mjs",
     "graphql:generate": "yarn svcs/router-service/ generate",
     "lint:setup": "rome start",

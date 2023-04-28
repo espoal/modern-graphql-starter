@@ -19,64 +19,36 @@ services:
       - mongodb_volume:/data/db
     command: mongod --quiet --logpath /dev/null
 
-  build:
-    build:
-      dockerfile: dev.docker
-    restart: always
-    volumes:
-      - ../:/home/node/app
-    command: "yarn node build.mjs watch"
-
-  build-tests:
-    build:
-      dockerfile: dev.docker
-    restart: always
-    volumes:
-      - ../:/home/node/app
-    command: "yarn node build.tests.mjs watch"
-
   etl-service:
-    build: ../dist/etl-service
+    build:
+      dockerfile: ../../svcs/etl-service/Dockerfile
+      context: ../dist/etl-service
     init: true
     depends_on:
       - mongodb
-      - build
     restart: always
     ports:
       - "8443:8443"
     volumes:
       - ../dist/etl-service/src:/home/node/app/src
-    command: "nodemon src/index.mjs"
+      - ../.yarn:/home/node/.yarn
+    command: "yarn nodemon src/index.mjs"
 
   ocm-service:
-    build: ../dist/ocm-service
+    build:
+      dockerfile: ../../svcs/ocm-service/Dockerfile
+      context: ../dist/ocm-service
     init: true
     depends_on:
       - etl-service
-      - build
     restart: always
     ports:
       - "4001:4000"
       - "8089:8088"
     volumes:
       - ../dist/ocm-service/src:/home/node/app/src
-    command: "nodemon src/index.mjs"
-
-  tests:
-    build:
-      context: ../dist/tests
-    profiles:
-      - donotstart
-    init: true
-    depends_on:
-      - mongodb
-      - build
-      - build-tests
-      - etl-service
-    restart: always
-    volumes:
-      - ../dist/tests/src:/home/node/app/src
-    command: "yarn node --test --watch src"
+      - ../.yarn:/home/node/.yarn
+    command: "yarn nodemon src/index.mjs"
 
 volumes:
   mongodb_volume:
