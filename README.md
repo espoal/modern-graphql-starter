@@ -3,7 +3,7 @@
 # Introduction
 
 This is a starter project for a modern graphql federation. It is optimized for **1 minute CI/CD**, tests included,
-find out how [here](docs/iteration.md). The main principles are:
+find out how [here](docs/pipelines.md). The main principles are:
 
 - **Fast iteration**: Several sources [[1](https://www.oreilly.com/library/view/accelerate/9781457191435/)] 
 [[2](https://circleci.com/resources/2023-state-of-software-delivery/)] [[3](https://cloud.google.com/devops/state-of-devops/)]
